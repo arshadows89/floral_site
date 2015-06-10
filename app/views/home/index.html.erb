@@ -1,11 +1,16 @@
 <!-- Header -->
 <header>
 	<a name="home"></a>
-	<div class="company name">Floral Company</div>
-	<div class="nav">
-		<div><%= link_to 'Home', (root_path + '#home'), :class => 'btn btn-mini' %></div>
-		<div><%= link_to 'Event Inquiry', (root_path + '#eventInquiry'), :class => 'btn btn-mini' %></div>
-		<div><%= link_to 'Contact Info', (root_path + '#contactInfo'), :class => 'btn btn-mini' %></div>
+	<div class="container-fluid">
+		<div id="header_row" class="row">
+			<div class="col-sm-4"></div>
+			<div class="col-sm-4" id="company_name">Floral Company</div>
+			<div class="col-sm-4" id="nav">
+				<div id="nav_home"><%= link_to 'Home', (root_path + '#home'), :class => 'btn btn-mini' %></div>
+				<div id="nav_eventInquiry"><%= link_to 'Event Inquiry', (root_path + '#eventInquiry'), :class => 'btn btn-mini' %></div>
+				<div id="nav_contactInfo"><%= link_to 'Contact Info', (root_path + '#contactInfo'), :class => 'btn btn-mini' %></div>
+			</div>
+		</div>
 	</div>
 
 <!-- Masonry Image -->

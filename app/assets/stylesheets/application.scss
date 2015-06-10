@@ -14,3 +14,18 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+// Header
+#company_name {
+	text-align: center;
+}
+#nav {
+	padding: 0;
+	text-align: right;
+}
+
+#nav_home,
+#nav_eventInquiry,
+#nav_contactInfo {
+	display: inline-block;
+}
