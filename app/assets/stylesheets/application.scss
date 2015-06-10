@@ -15,6 +15,11 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+body {
+	padding-top: 10px;
+	padding-bottom: 20px;
+}
+
 // Header
 #company_name {
 	text-align: center;
@@ -38,5 +43,36 @@ h3 {
 // Event Inquiry
 #event-form {
 	background-image: url("https://d2d00szk9na1qq.cloudfront.net/Product/ecfafabe-aea8-4266-afae-28940bdb1d6f/Images/Large_0290958.jpg");
-	
+	border-radius: 15px;
+	background-size: 50%;
+	height: 100%;
 }
+#ef-title {
+	text-align: center;
+	font-size: 55px;
+	font-family: 'Italianno', cursive;
+}
+#ef-explanation {
+	width: 90%;
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 15px;
+	font-family: 'Gentium Basic', serif;
+	font-size: 16px;
+}
+#new_contact input {
+	padding: 10px;
+	margin: 5px auto;
+	display: block;
+}
+#contact_message {
+	width: 95%;
+	margin: 0 auto;
+	display: block;
+	height: 100px;
+}
+input.formbuttons {
+	margin: 5px auto 15px !important;
+}
+
+
