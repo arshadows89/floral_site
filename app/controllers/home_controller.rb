@@ -1,4 +1,5 @@
 class HomeController < ApplicationController
+
   def index
   end
 
@@ -8,13 +9,22 @@ class HomeController < ApplicationController
 
   def create
     @contact = Contact.new(contact_params)
-    @contact.request = request
-    if @contact.deliver
-      flash.now[:notice] = 'Thank you for your message. We will contact you soon!'
-    else
-      flash.now[:error] = 'Cannot send message.'
-      render :new
-    end
+    m = Mandrill::API.new
+    message = { 
+    :subject=> "Omg this is the subject", 
+    :from_name=> "this is from joe",
+    :from_email=>"hello@cooksmarts.com",
+    :to=>[  
+     {  
+       :email=> "dooffycom@gmail.com",  
+       :name=> "steve" 
+     }  
+    ],
+    :html=>render_to_string('mailer/new_email', :layout => false), 
+    :preserve_recipients => false
+    } 
+    sending = m.messages.send message
+    redirect_to ''
   end
 
   private
