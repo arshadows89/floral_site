@@ -17,6 +17,10 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require imagesloaded
+    $(window).resize(function(){
+      $(".masonry").masonry("reload");
+    });
+
 $(document).ready(function() {
 	(function( $ ) {
 
